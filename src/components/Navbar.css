@@ -1,0 +1,101 @@
+/* Navbar.css */
+
+.navbar {
+    
+    font-family: 'Poppins', sans-serif;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a0bee0; /* Light background color */
+    padding: 10px 30px; /* Spacing inside the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: Arial, sans-serif;
+    height:70px;
+  }
+
+  
+  
+
+  
+  .navbar .nav-links {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar .nav-links li {
+    margin: 0 15px; /* Spacing between links */
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: #333; /* Darker grey for links */
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #008cba; /* Blue color on hover */
+  }
+  
+  .navbar .search-bar {
+    display: flexbox;
+    align-items: center;
+  }
+  
+  .navbar .search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;  
+    height: 40px;
+    width: 500px;
+    font-size: larger;
+  }
+  
+  .navbar .search-bar button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #3D8AE2; /* Blue button */
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    height:50px;
+    width: auto;
+  }
+  
+  .navbar .search-bar button:hover {
+    background-color: #005f7d; /* Darker blue on hover */
+  }
+
+  .navbar .logo {
+    font-family: 'Poppins', sans-serif;
+    display: flexbox;
+    align-items: center;
+    justify-content: right;
+    font-size: 1.5rem;
+    font-weight: 100%;
+    color:#000; /* Black text */
+    margin-top:2px;
+    
+  }
+  
+  .navbar .logo img {
+    margin-right: 10px;
+    height: 80px;
+    width:125px;
+    border:none;
+    vertical-align: text-top;
+    
+    
+  }
+
+  .navbar .logo .website-title{
+    vertical-align: text-top;
+    
+  }
+  
