@@ -1,6 +1,8 @@
 import React from 'react';
 import './Navbar.css';
 import logo from './logo.png'; // Replace with your logo path
+import Signup from './Signup';
+
 
 const Navbar=()=> {
   return (
@@ -27,9 +29,13 @@ const Navbar=()=> {
     </div>
     
     </div>
+    
 
     
   );
+  
 }
+
+
 
 export default Navbar;

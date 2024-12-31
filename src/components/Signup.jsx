@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Signup.css";
 
+
 const Signup = () => {
   const [isSignUp, setIsSignUp] = useState(false);
 

@@ -1,13 +1,12 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Signup from './components/Signup';
+import AppRoutes from './AppRoutes';
+
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Signup />
-    </div>
+      <AppRoutes/>
+    </div>  
   );
 }
 
