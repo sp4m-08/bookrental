@@ -13,8 +13,8 @@ const Navbar=()=> {
         <li><a href=" ">Home</a></li>
         <li><a href=" ">Books</a></li>
         <li><a href=" ">Notes</a></li>
-        <li><a href="">Rentals</a></li>
-        <li><a href="">FAQs</a></li>
+        <li><a href=" ">Rentals</a></li>
+        <li><a href=" ">FAQs</a></li>
       </ul>
 
       {/* Search Bar */}
