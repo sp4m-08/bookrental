@@ -21,7 +21,7 @@
     gap: 16px;
     overflow-x: auto; /* Enable horizontal scrolling */
     padding-bottom: 8px; /* Add padding for better scrollbar spacing */
-    max-width: 1000px; /* Prevent the container from expanding beyond the parent width */
+    max-width:1000px; /* Prevent the container from expanding beyond the parent width */
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: #ccc transparent; /* For Firefox */
     
@@ -50,7 +50,8 @@
 }
 
 .show-more {
-    display: inline-block;
+    display: inline-flex;
+    align-items: flex-end;
     margin-top: 16px;
     font-size: 16px;
     color: #1f2353;

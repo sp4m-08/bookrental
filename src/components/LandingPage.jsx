@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 const LandingPage = () => {
 
   let navigate = useNavigate(); 
-  const routeChange = () =>{ 
-    let path = `/Signup`; 
+  const routeLogin = () =>{ 
+    let path = `/login`; 
     navigate(path);
   }
 
@@ -28,7 +28,7 @@ const LandingPage = () => {
               <li>About us</li>
               <li>
                 <div className="menu-icon-wrapper">
-                  <div className="menu-circle" onClick={routeChange}>Sign up/Login</div>
+                  <div className="menu-circle" onClick={routeLogin}>Sign up/Login</div>
                 </div>
             </li>
             </ul>
@@ -47,7 +47,7 @@ const LandingPage = () => {
             <br />
             incididunt ut labore et dolore magna aliqu
           </p>
-          <button className="btn" onClick={routeChange}>Sign up/Login</button>
+          <button className="btn" onClick={routeLogin}>Sign up/Login</button>
         </div>
       </section>
     </div>

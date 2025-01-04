@@ -14,7 +14,12 @@ const AppRoutes=()=>{
                 </div>}/>
                     
                 
-                <Route path ='/Signup' element={<div>
+                <Route path ='/login' element={<div>
+                    <Navbar/>
+                    <Signup/>
+                </div>}/>
+
+                <Route path ='/signup' element={<div>
                     <Navbar/>
                     <Signup/>
                 </div>}/>
