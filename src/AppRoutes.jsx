@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Signup from './components/Signup';
-import LandingPage from './components/LandingPage';
-import BookNotes from './components/BookNotes';
+import Navbar from './components/Signup/Navbar';
+import Signup from './components/Signup/Signup';
+import LandingPage from './components/LandingPage/LandingPage';
+import BookNotes from './components/LandingPage/BookNotes';
 
 const AppRoutes=()=>{
     return(
@@ -17,11 +17,13 @@ const AppRoutes=()=>{
                 <Route path ='/login' element={<div>
                     <Navbar/>
                     <Signup/>
+                    
                 </div>}/>
 
                 <Route path ='/signup' element={<div>
                     <Navbar/>
                     <Signup/>
+                    
                 </div>}/>
                 
             </Routes>

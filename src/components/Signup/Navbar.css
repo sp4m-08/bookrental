@@ -8,11 +8,13 @@
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #a0bee0; /* Light background color */
+    background-color: #d5d3d390; /* Light background color */
     padding: 10px 30px; /* Spacing inside the navbar */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     font-family: Arial, sans-serif;
     height:70px;
+    /* border-top-left-radius: 10%;
+    border-top-right-radius: 10%; */
   }
 
   

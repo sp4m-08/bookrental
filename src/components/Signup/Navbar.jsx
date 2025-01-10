@@ -25,7 +25,7 @@ const Navbar=()=> {
 
       <div className="logo">
         <img src={logo} alt="Logo" />
-        <a className="website-title">Book Rental/Notes Finder</a>
+        <a className="website-title" href="/">Book Rental/Notes Finder</a>
     </div>
     
     </div>

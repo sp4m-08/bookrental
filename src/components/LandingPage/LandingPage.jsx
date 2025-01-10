@@ -27,11 +27,11 @@ const LandingPage = () => {
               <li>FAQ</li>
               <li>About us</li>
               <li>
-                <div className="menu-icon-wrapper">
-                  <div className="menu-circle" onClick={routeLogin}>Sign up/Login</div>
+                <div className="slb">
+                  <div className="btop" onClick={routeLogin}>Sign up/Login</div>
                 </div>
             </li>
-            </ul>
+            </ul> 
             
           </nav>
         </div>
@@ -40,7 +40,7 @@ const LandingPage = () => {
       <section className="mid">
         <div className="mid-content">
           <h1>
-            Book Rental / <span>Find Notes</span>
+            Book Rental / Find Notes
           </h1>
           <p>
             Lorem ipsum dolor sit amet, olore ma laboris n sed do eiusmod tempor
