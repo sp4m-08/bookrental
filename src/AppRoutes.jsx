@@ -3,29 +3,35 @@ import Navbar from './components/Signup/Navbar';
 import Signup from './components/Signup/Signup';
 import LandingPage from './components/LandingPage/LandingPage';
 import BookNotes from './components/LandingPage/BookNotes';
+import Faq from './components/LandingPage/Faq';
 
-const AppRoutes=()=>{
-    return(
+
+function AppRoutes() {
+    return (
         <Router>
             <Routes>
                 <Route path='/' element={<div>
-                    <LandingPage/>
-                    <BookNotes/>
-                </div>}/>
-                    
-                
-                <Route path ='/login' element={<div>
-                    <Navbar/>
-                    <Signup/>
-                    
-                </div>}/>
+                    <LandingPage />
+                    <BookNotes />
+                    <Faq/>
 
-                <Route path ='/signup' element={<div>
-                    <Navbar/>
-                    <Signup/>
                     
-                </div>}/>
-                
+                    
+                </div>} />
+
+
+                <Route path='/login' element={<div>
+                    <Navbar />
+                    <Signup />
+
+                </div>} />
+
+                <Route path='/signup' element={<div>
+                    <Navbar />
+                    <Signup />
+
+                </div>} />
+
             </Routes>
         </Router>
     );
