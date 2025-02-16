@@ -8,13 +8,13 @@ const BookNotes = () => {
 
     let navigateNotes = useNavigate(); 
         const routeNotes = () =>{ 
-        let path = `/notes`; 
+        let path = `/home`; 
         navigate(path);
     }
 
     let navigateBooks = useNavigate(); 
         const routeBooks = () =>{ 
-        let path = `/books`; 
+        let path = `/home`; 
         navigate(path);
     }
     return (

@@ -1,0 +1,255 @@
+.list-section {
+    width: 100%;
+    max-width: 1280px;
+    min-height: 545px;
+    padding: 20px;
+    background: #557bb026;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 31.63px;
+    font-family: 'Gloock';
+    color: #1c0071;
+    text-align: center;
+}
+
+.filter-material-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .filter-material-container {
+        flex-direction: row;
+    }
+}
+
+.filter-section {
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-bar {
+    width: 100%;
+    height: 41.51px;
+    background: #fdfdfd;
+    border-radius: 16.12px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 13.84px;
+    font-family: 'Poppins';
+    color: #000000e8;
+}
+
+.search-icon {
+    width: 26px;
+    height: 30px;
+}
+
+.checkbox-container {
+    display: flex;
+    gap: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox-text {
+    font-size: 13.84px;
+    font-family: 'Poppins';
+    color: #1c0071;
+}
+
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subject-dropdown {
+    width: 100%;
+    height: 30.64px;
+    border-radius: 7.91px;
+    border: 0.99px solid #1c0071;
+    padding: 0 15px;
+    font-family: 'Poppins';
+    font-size: 13.84px;
+    color: #1c0071;
+    outline: none;
+}
+
+.date-filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.availability-text {
+    font-size: 13.84px;
+    font-family: 'Poppins';
+    color: #1c0071;
+}
+
+.date-label {
+    font-size: 13.84px;
+    font-family: 'Poppins';
+    color: #1c0071;
+}
+
+.date-input {
+    width: 100%;
+    height: 30.64px;
+    border-radius: 7.91px;
+    border: 0.99px solid #1c0071;
+    padding: 0 15px;
+    margin-top: 5px;
+    font-family: 'Poppins';
+    font-size: 13.84px;
+    color: #1c0071;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.clear-button {
+    padding: 4px 16px;
+    border-radius: 7.91px;
+    border: none;
+    background: transparent;
+    color: #1c0071;
+    font-size: 14px;
+    font-family: 'Poppins';
+    cursor: pointer;
+}
+
+.apply-button {
+    padding: 4px 16px;
+    border-radius: 7.91px;
+    border: none;
+    background: #1c0071;
+    color: #ccd9ec;
+    font-size: 14px;
+    font-family: 'Poppins';
+    cursor: pointer;
+}
+
+.materials-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.material-card {
+    width: 100%;
+    max-width: 669px;
+    height: 141px;
+    background: #fff;
+    border-radius: 12.51px;
+    border: 0.99px solid #1c0071;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.material-image {
+    width: 186px;
+    height: 121px;
+    object-fit: cover;
+}
+
+.material-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.material-title {
+    font-size: 18px;
+    font-family: 'Poppins';
+    color: #3c3e78;
+    margin: 0;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-icon {
+    width: 21px;
+    height: 21px;
+}
+
+.author-name {
+    font-size: 8px;
+    font-family: 'Poppins';
+    color: #3c3e78;
+}
+
+.tags-container {
+    display: flex;
+    gap: 10px;
+}
+
+.material-tag {
+    padding: 2px 8px;
+    border-radius: 1.96px;
+    border: 0.65px solid #1c0071;
+    font-size: 9.8px;
+    font-family: 'Poppins';
+    color: #3c3e78;
+}
+
+.divider {
+    border-left: 1px solid #1c0071;
+    margin: 0 20px;
+}
+
+.date-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.date-label {
+    font-size: 15px;
+    font-family: 'Poppins';
+    color: #3c3e78;
+    margin: 0;
+}
+
+.date-value {
+    font-size: 15px;
+    font-family: 'Poppins';
+    color: #3c3e78;
+    margin: 0;
+}

@@ -4,6 +4,7 @@ import Signup from './components/Signup/Signup';
 import LandingPage from './components/LandingPage/LandingPage';
 import BookNotes from './components/LandingPage/BookNotes';
 import Faq from './components/LandingPage/Faq';
+import Homepage from './components/Homepage/Homepage';
 
 
 function AppRoutes() {
@@ -29,6 +30,11 @@ function AppRoutes() {
                 <Route path='/signup' element={<div>
                     <Navbar />
                     <Signup />
+
+                </div>} />
+
+                <Route path='/home' element={<div>
+                    <Homepage/>
 
                 </div>} />
 

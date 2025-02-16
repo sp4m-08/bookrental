@@ -10,6 +10,12 @@ const LandingPage = () => {
     navigate(path);
   }
 
+  let Home = useNavigate();
+  const routeHome = () => {
+    let path = '/home';
+    Home(path);
+  }
+
   return (
     <div>
       <header>
@@ -21,7 +27,7 @@ const LandingPage = () => {
           </div>
           <nav>
             <ul className="nav-links">
-              <li>Home</li>
+              <li onClick={routeHome}>Home</li>
               <li>Browse Books</li>
               <li>Browse Notes</li>
               <li>FAQ</li>
