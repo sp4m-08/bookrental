@@ -1,7 +1,21 @@
 import React from 'react';
 import './Header.css';
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+
+  let navigateProfile = useNavigate(); 
+    const routeProfile = () =>{ 
+    let path = `/profile`; 
+    navigate(path);
+  }
+
+  let navigateWishlist = useNavigate();
+    const routeWishlist = () => {
+    let path = '/wishlist';
+      navigate(path);
+  }
+  
   const handleUpload = () => {
     console.log('Upload clicked');
   };
@@ -17,8 +31,8 @@ const Header = () => {
 
       <nav className="nav-links">
         <span className="nav-link">Home</span>
-        <span className="nav-link">Browse All Materials</span>
-        <span className="nav-link">Profile</span>
+        <span className="nav-link" onClick={routeProfile}>Profile</span>
+        <span className="nav-link" onClick={routeWishlist}>Wishlist</span>
       </nav>
 
       <button 
