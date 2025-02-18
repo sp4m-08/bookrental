@@ -6,6 +6,7 @@ import BookNotes from './components/LandingPage/BookNotes';
 import Faq from './components/LandingPage/Faq';
 import Homepage from './components/Homepage/Homepage';
 import Upload from './components/Upload/Upload';
+import WishList from './components/Wishlist/WishList';
 
 function App() {
     return (
@@ -40,6 +41,11 @@ function App() {
 
                 <Route path='/upload' element={<div>
                     <Upload/>
+
+                </div>} />
+
+                <Route path='/wishlist' element={<div>
+                    <WishList/>
 
                 </div>} />
 

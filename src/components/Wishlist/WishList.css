@@ -1,0 +1,36 @@
+.wishlist-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+
+.wishlist-title {
+  font-family: 'Gloock', serif;
+  font-size: 49.11px;
+  color: #1c0071;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  background-color: #eef0f8;
+  border-radius: 6.76px;
+  border: 0.84px solid #eef1fc;
+  overflow: hidden;
+}
+
+.table-body {
+  max-height: 528px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .wishlist-title {
+    font-size: 36px;
+  }
+
+  .table-container {
+    padding: 10px;
+  }
+}
+

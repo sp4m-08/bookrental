@@ -1,7 +1,20 @@
 import React from 'react';
 import './Header.css';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  let navigateProfile = useNavigate();
+  const routeProfile = () => {
+    let path = `/profile`;
+    navigateProfile(path);
+  };
+
+  let navigateWishlist = useNavigate();
+  const routeWishlist = () => {
+    let path = '/wishlist';
+    navigateWishlist(path);
+  };
+
   return (
     <div className="header">
       <div className="logo-section">
@@ -12,26 +25,20 @@ const Header = () => {
         </div>
         <span className="logo-title">LOGO</span>
       </div>
-      <div className="nav-links">
-        <NavLink>Home</NavLink>
-        <NavLink>Profile</NavLink>
-        
-              <NavLink>WishList</NavLink>
-      </div>
+      <nav className="nav-links">
+        <span className="nav-link">Home</span>
+        <span className="nav-link" onClick={routeProfile}>Profile</span>
+        <span className="nav-link" onClick={routeWishlist}>WishList</span>
+      </nav>
       <div className="right-section">
         <img 
           src="./noti_bell.png"
           alt="notifications"
           className="notification-icon"
         />
-        {/* <button className="upload-button">Upload Material</button> */}
       </div>
     </div>
   );
 };
-
-const NavLink = ({ children }) => (
-  <span className="nav-link">{children}</span>
-);
 
 export default Header;
