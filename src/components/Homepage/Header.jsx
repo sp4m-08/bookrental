@@ -7,18 +7,24 @@ const Header = () => {
   let navigateProfile = useNavigate(); 
     const routeProfile = () =>{ 
     let path = `/profile`; 
-    navigate(path);
+    navigateProfile(path);
   }
 
   let navigateWishlist = useNavigate();
     const routeWishlist = () => {
     let path = '/wishlist';
-      navigate(path);
+      navigateWishlist(path);
+  }
+  let navigateUpload = useNavigate();
+    const routeUpload = () => {
+    let path = '/upload';
+      navigateUpload(path);
+      console.log('Upload clicked');
   }
   
-  const handleUpload = () => {
-    console.log('Upload clicked');
-  };
+  // const handleUpload = () => {
+    
+  // };
 
   return (
     <header className="header">
@@ -37,7 +43,7 @@ const Header = () => {
 
       <button 
         className="upload-button" 
-        onClick={handleUpload}
+        onClick={routeUpload}
         onMouseOver={(e) => {
           e.currentTarget.style.background = '#1C0071';
           e.currentTarget.style.color = '#fff';

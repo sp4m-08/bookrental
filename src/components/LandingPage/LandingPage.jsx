@@ -1,20 +1,24 @@
 import React from "react";
 import "./LandingPage.css";
 import { useNavigate } from "react-router-dom";
+import { auth, googleProvider } from "../../firebase";
+import { signInWithPopup } from "firebase/auth";
 
 const LandingPage = () => {
+  let navigate = useNavigate();
 
-  let navigate = useNavigate(); 
-  const routeLogin = () =>{ 
-    let path = `/login`; 
-    navigate(path);
-  }
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      console.log("User signed in:", result.user);
 
-  let Home = useNavigate();
-  const routeHome = () => {
-    let path = '/home';
-    Home(path);
-  }
+      // Redirect to homepage after successful login
+      navigate("/home");
+    } catch (error) {
+      console.error("Google sign-in error:", error.message);
+      alert("Authentication failed. Please try again.");
+    }
+  };
 
   return (
     <div>
@@ -27,33 +31,30 @@ const LandingPage = () => {
           </div>
           <nav>
             <ul className="nav-links">
-              <li onClick={routeHome}>Home</li>
+              <li onClick={() => navigate('/home')}>Home</li>
               <li>Browse Books</li>
               <li>Browse Notes</li>
               <li>FAQ</li>
               <li>About us</li>
               <li>
                 <div className="slb">
-                  <div className="btop" onClick={routeLogin}>Sign up/Login</div>
+                  <div className="btop" onClick={handleGoogleLogin}>Sign up/Login</div>
                 </div>
-            </li>
-            </ul> 
-            
+              </li>
+            </ul>
           </nav>
         </div>
       </header>
 
       <section className="mid">
         <div className="mid-content">
-          <h1>
-            Book Rental / Find Notes
-          </h1>
+          <h1>Book Rental / Find Notes</h1>
           <p>
             Lorem ipsum dolor sit amet, olore ma laboris n sed do eiusmod tempor
             <br />
             incididunt ut labore et dolore magna aliqu
           </p>
-          <button className="btn" onClick={routeLogin}>Sign up/Login</button>
+          <button className="btn" onClick={handleGoogleLogin}>Sign up/Login</button>
         </div>
       </section>
     </div>

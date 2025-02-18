@@ -1,0 +1,127 @@
+.upload-projects {
+    background-color: #557bb026;
+    border-radius: 16px;
+    padding: 27px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 734px;
+    min-height: 720px;
+    margin-right:2.15%;
+    
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: 27px;
+    border-radius: 13px;
+    margin-top:6%;
+    box-sizing: border-box;
+}
+
+.title {
+    color: #1C0071;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 31px;
+}
+
+.subtitle {
+    color: #6C606C;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.uploader {
+    width: 100%;
+    height: 314px;
+    background-color: #EEF0F8;
+    border: 1px solid #1C0071;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    box-sizing: border-box;
+}
+
+.upload-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.upload-text {
+    color: #181D27;
+    font-size: 18px;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.upload-subtext {
+    color: #6C606C;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.browse-button {
+    background-color: #1C0071;
+    color: #CCD9EC;
+    padding: 11px 18px;
+    border-radius: 8px;
+    border: none;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    border-radius: 112px;
+    margin-top: 20px;
+}
+
+.browse-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 13px;
+}
+
+.cancel-button {
+    background-color: transparent;
+    color: #1C0071;
+    border: 1px solid #1C0071;
+    width: 100%;
+    justify-content: center;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.done-button {
+    background-color: #1C0071;
+    color: #CCD9EC;
+    width: 100%;
+    justify-content: center;
+    padding: 11px 18px;
+    border-radius: 8px;
+    border: none;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
