@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './UploadProjects.css';
 
-
 const UploadProjects = () => {
   const [files, setFiles] = useState([]);
 
@@ -12,11 +11,19 @@ const UploadProjects = () => {
 
   const handleFiles = (newFiles) => {
     const validFiles = newFiles.filter(file => {
-      const isValidType = ['image/jpeg', 'image/png'].includes(file.type);
+      const isValidType = ['image/jpeg', 'image/png','application/pdf'].includes(file.type);
       const isValidSize = file.size <= 25 * 1024 * 1024; // 25MB
       return isValidType && isValidSize;
-    });
+    }).map(file => ({
+      file,
+      id: Math.random().toString(36).substr(2, 9),
+      name: file.name
+    }));
     setFiles([...files, ...validFiles]);
+  };
+
+  const handleRemoveFile = (id) => {
+    setFiles(files.filter(file => file.id !== id));
   };
 
   return (
@@ -30,16 +37,45 @@ const UploadProjects = () => {
         </div>
 
         <div className="uploader">
-          <img 
-            src="https://dashboard.codeparrot.ai/api/image/Z7M2DzO_YEiK21wK/clipboar.png" 
-            alt="Upload icon"
-            className="upload-icon"
-          />
-          <p className="upload-text">Drop file or Browse</p>
-          <p className="upload-subtext">Format: jpeg, png & Max file size: 25 MB</p>
+          {files.length > 0 ? (
+            <div className="file-list">
+              {files.map(file => (
+                <div key={file.id} className="file-item">
+                  <div className="file-info">
+                    <img 
+                      src="./file.png" 
+                      alt="File icon"
+                      className="file-icon"
+                    />
+                    <span className="file-name">{file.name}</span>
+                  </div>
+                  <button 
+                    className="remove-button"
+                    onClick={() => handleRemoveFile(file.id)}
+                  >
+                    <img 
+                      src="/delete.png" 
+                      alt="Remove"
+                      className="remove-icon"
+                    />
+                  </button>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <>
+              <img 
+                src="/clipboard.png" 
+                alt="Upload icon"
+                className="upload-icon"
+              />
+              <p className="upload-text">Drop file or Browse</p>
+              <p className="upload-subtext">Format: jpeg, png, pdf & Max file size: 25 MB</p>
+            </>
+          )}
           <label htmlFor="file-upload" className="browse-button">
             <img 
-              src="https://dashboard.codeparrot.ai/api/image/Z7M2DzO_YEiK21wK/icons.png" 
+              src="/browseicon.png" 
               alt="Browse"
               className="browse-icon"
             />
@@ -48,7 +84,7 @@ const UploadProjects = () => {
           <input
             id="file-upload"
             type="file"
-            accept=".jpg,.jpeg,.png"
+            accept=".jpg,.jpeg,.png,.pdf"
             multiple
             onChange={handleFileInput}
             style={{ display: 'none' }}

@@ -6,8 +6,7 @@
     width: 100%;
     max-width: 734px;
     min-height: 720px;
-    margin-right:2.15%;
-    
+    margin-right: 2.15%;
 }
 
 .modal {
@@ -16,7 +15,7 @@
     gap: 36px;
     padding: 27px;
     border-radius: 13px;
-    margin-top:6%;
+    margin-top: 6%;
     box-sizing: border-box;
 }
 
@@ -48,6 +47,8 @@
     align-items: center;
     gap: 9px;
     box-sizing: border-box;
+    padding: 20px;
+    position: relative;
 }
 
 .upload-icon {
@@ -75,7 +76,7 @@
     background-color: #1C0071;
     color: #CCD9EC;
     padding: 11px 18px;
-    border-radius: 8px;
+    border-radius: 112px;
     border: none;
     font-family: Poppins;
     font-size: 18px;
@@ -84,7 +85,6 @@
     display: flex;
     align-items: center;
     gap: 11px;
-    border-radius: 112px;
     margin-top: 20px;
 }
 
@@ -124,4 +124,76 @@
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
+}
+
+/* New styles for file list */
+.file-list {
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.file-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.file-name {
+    color: #1C0071;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Scrollbar styles */
+.file-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.file-list::-webkit-scrollbar-track {
+    background: #F3F4F6;
+    border-radius: 3px;
+}
+
+.file-list::-webkit-scrollbar-thumb {
+    background: #1C0071;
+    border-radius: 3px;
+}
+
+.file-list::-webkit-scrollbar-thumb:hover {
+    background: #150058;
 }

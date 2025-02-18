@@ -74,7 +74,7 @@ const MaterialDetails = () => {
               className="date-input"
               placeholder="dd/mm/yy"
             />
-            <img src="https://dashboard.codeparrot.ai/api/image/Z7M2DzO_YEiK21wK/bx-bx-ca.png" alt="calendar icon" className="calendar-icon" />
+            <img src="/calender.png" alt="calendar icon" className="calendar-icon" />
           </div>
         </div>
       </div>
