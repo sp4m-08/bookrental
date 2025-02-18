@@ -15,6 +15,12 @@ const Header = () => {
     navigateWishlist(path);
   };
 
+  let navigateHome = useNavigate();
+  const routeHome = () => {
+    let path = '/home';
+    navigateHome(path);
+  };
+
   return (
     <div className="header">
       <div className="logo-section">
@@ -26,7 +32,7 @@ const Header = () => {
         <span className="logo-title">LOGO</span>
       </div>
       <nav className="nav-links">
-        <span className="nav-link">Home</span>
+        <span className="nav-link" onClick={routeHome}>Home</span>
         <span className="nav-link" onClick={routeProfile}>Profile</span>
         <span className="nav-link" onClick={routeWishlist}>WishList</span>
       </nav>
