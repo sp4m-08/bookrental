@@ -8,6 +8,7 @@ body {
 }
 
 .container-faq {
+    background:none;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -16,8 +17,9 @@ body {
 
 .header {
     font-size: 3.5rem;
-    margin: 20px 0;
-    color: #1d1d70;
+    /* margin: 20px 0;
+    color: #1d1d70; */
+    background: none;
 }
 
 .faq {

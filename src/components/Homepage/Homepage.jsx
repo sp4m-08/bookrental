@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Homepage/Header';
 import ListSection from '../Homepage/ListSection';
-import Footer from '../Homepage/Footer';
+//import Footer from '../Homepage/Footer';
 import './Homepage.css';
 
 const Homepage = () => {
@@ -18,9 +18,9 @@ const Homepage = () => {
       </div>
 
       
-      <div className="footer-section">
+      {/* <div className="footer-section">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 };

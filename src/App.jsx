@@ -6,7 +6,7 @@ import BookNotes from './components/LandingPage/BookNotes';
 import Faq from './components/LandingPage/Faq';
 import Homepage from './components/Homepage/Homepage';
 import Upload from './components/Upload/Upload';
-import WishList from './components/Wishlist/WishList';
+import WishList from './components/Wishlist/Wishlist';
 
 function App() {
     return (

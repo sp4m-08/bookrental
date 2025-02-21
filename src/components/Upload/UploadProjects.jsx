@@ -11,7 +11,7 @@ const UploadProjects = () => {
 
   const handleFiles = (newFiles) => {
     const validFiles = newFiles.filter(file => {
-      const isValidType = ['image/jpeg', 'image/png','application/pdf'].includes(file.type);
+      const isValidType = ['image/jpeg', 'image/png', 'application/pdf'].includes(file.type);
       const isValidSize = file.size <= 25 * 1024 * 1024; // 25MB
       return isValidType && isValidSize;
     }).map(file => ({
@@ -26,13 +26,22 @@ const UploadProjects = () => {
     setFiles(files.filter(file => file.id !== id));
   };
 
+  const handleDone = () => {
+    if (files.length > 0) {
+      alert('Successfully uploaded!');
+      setFiles([]); // Reset the files state to an empty array
+    } else {
+      alert('Please upload at least 3 files before proceeding.'); // Optional: Alert if no files are uploaded
+    }
+  };
+
   return (
     <div className="upload-projects">
       <div className="modal">
         <div>
           <h2 className="title">Upload Projects</h2>
           <p className="subtitle">
-            Please upload at least 3 pictures in JPEG or PNG format and make sure the file size is under 25 MB.
+            Please upload at least 3 files in JPEG, PNG or PDF format and make sure the file size is under 25 MB.
           </p>
         </div>
 
@@ -93,7 +102,7 @@ const UploadProjects = () => {
 
         <div className="action-buttons">
           <button className="cancel-button">Cancel</button>
-          <button className="done-button">Done</button>
+          <button className="done-button" onClick={handleDone}>Done</button>
         </div>
       </div>
     </div>

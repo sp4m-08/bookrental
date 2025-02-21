@@ -10,6 +10,7 @@
     margin-left: 1.3%;
     margin-right: 10%;
     backdrop-filter: blur(5px);
+    margin-top:16px;
 }
 
 .logo-section {
@@ -82,18 +83,6 @@
     cursor: pointer;
 }
 
-.noti-container{
-    display:none;
-}
-
-.notification-icon:hover + .noti-container{
-    display:block;
-    min-width:100px;
-    min-height:80px;
-    background: none;
-    background-color: #557bb026;
-    padding: 10px;
-}
 .upload-button {
     width: 164px;
     height: 40px;
@@ -105,6 +94,7 @@
     font-size: 17px;
     cursor: pointer;
     transition: background-color 0.2s;
+    padding:12px;
 }
 
 .upload-button:hover {

@@ -1,111 +1,18 @@
 import React from 'react';
-import TableHeader from './TableHeader';
-import TableRow from './TableRow';
-import './WishList.css';
+import Navbar from './Navbar';
+import WishlistTable from './WishlistTable';
+import './Wishlist.css';
 
-const WishList = () => {
-  const headers = ['Lender', 'Status', 'Title', 'Valid Till', 'Availability', ''];
-  const rows = [
-    {
-      lender: 'John Doe',
-      status: 'Requested',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    },
-    {
-      lender: 'John Doe',
-      status: 'Requested',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    },
-    {
-      lender: 'John Doe',
-      status: 'Requested',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    },
-    {
-      lender: 'John Doe',
-      status: 'Requested',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    },
-    {
-      lender: 'John Doe',
-      status: 'Requested',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    },
-    {
-      lender: 'John Doe',
-      status: 'Accepted',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    },
-    {
-      lender: 'John Doe',
-      status: 'Accepted',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    },
-    {
-      lender: 'John Doe',
-      status: 'Accepted',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    },
-    {
-      lender: 'John Doe',
-      status: 'Accepted',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    },
-    {
-      lender: 'John Doe',
-      status: 'Accepted',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    },
-    {
-      lender: 'John Doe',
-      status: 'Accepted',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    },
-    {
-      lender: 'John Doe',
-      status: 'Accepted',
-      title: 'Bold text column',
-      validTill: 'Regular text column',
-      availability: 'Regular text column'
-    }
-  ];
-
+const Wishlist = () => {
   return (
-    <div className="wishlist-container">
-      <h1 className="wishlist-title">WishList</h1>
-      <div className="table-container">
-        <TableHeader headers={headers} />
-        <div className="table-body">
-          {rows.map((row, index) => (
-            <TableRow key={index} row={row} />
-          ))}
-        </div>
+    <div className="wishlist-page">
+      <Navbar />
+      <div className="wishlist-container">
+        <h1 className="wishlist-title">WishList</h1>
+        <WishlistTable />
       </div>
     </div>
   );
 };
 
-export default WishList;
-
+export default Wishlist;

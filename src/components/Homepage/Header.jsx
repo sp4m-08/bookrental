@@ -1,30 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
 
-  let navigateProfile = useNavigate(); 
-    const routeProfile = () =>{ 
-    let path = `/profile`; 
-    navigateProfile(path);
-  }
-
-  let navigateWishlist = useNavigate();
-    const routeWishlist = () => {
-    let path = '/wishlist';
-      navigateWishlist(path);
-  }
-  let navigateUpload = useNavigate();
-    const routeUpload = () => {
-    let path = '/upload';
-      navigateUpload(path);
-      console.log('Upload clicked');
-  }
-  
-  // const handleUpload = () => {
-    
-  // };
+  const routeTo = (path) => {
+    navigate(path);
+  };
 
   return (
     <header className="header">
@@ -36,25 +19,28 @@ const Header = () => {
       </div>
 
       <nav className="nav-links">
-        <span className="nav-link">Home</span>
-        <span className="nav-link" onClick={routeProfile}>Profile</span>
-        <span className="nav-link" onClick={routeWishlist}>Wishlist</span>
+        <span className="nav-link" onClick={() => routeTo('/')}>Home</span>
+        <span className="nav-link" onClick={() => routeTo('/profile')}>Profile</span>
+        <span className="nav-link" onClick={() => routeTo('/wishlist')}>Wishlist</span>
       </nav>
 
-      <button 
-        className="upload-button" 
-        onClick={routeUpload}
-        onMouseOver={(e) => {
-          e.currentTarget.style.background = '#1C0071';
-          e.currentTarget.style.color = '#fff';
-        }}
-        onMouseOut={(e) => {
-          e.currentTarget.style.background = 'transparent';
-          e.currentTarget.style.color = '#1C0071';
-        }}
-      >
-        Upload Material
-      </button>
+      <div className="right-section">
+        <img src="noti_bell.png" className="notification-icon" alt="Notification Bell" />
+        <button
+          className="upload-button"
+          onClick={() => routeTo('/upload')}
+          onMouseOver={(e) => {
+            e.currentTarget.style.background = '#1C0071';
+            e.currentTarget.style.color = '#fff';
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.background = 'transparent';
+            e.currentTarget.style.color = '#1C0071';
+          }}
+        >
+          Upload Material
+        </button>
+      </div>
     </header>
   );
 };

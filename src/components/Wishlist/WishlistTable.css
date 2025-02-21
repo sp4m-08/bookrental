@@ -1,0 +1,53 @@
+.wishlist-table {
+    width: 100%;
+    background:#f9fafb;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.scrollable-container {
+    max-height: 400px;
+    /* Set the max height for the scrollable area */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+}
+
+.scrollable-container::-webkit-scrollbar {
+    width: 16px;
+    /* Width of the scrollbar */
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+    background: #1c0071;
+    /* Color of the thumb */
+    border-radius: 16px;
+    /* Rounded corners */
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+    background: none;
+    /* Color of the track */
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-cell {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.table-body {
+    border-top: 1px solid #e5e7eb;
+}
+
+.table-body>div:not(:last-child) {
+    border-bottom: 1px solid #e5e7eb;
+}
