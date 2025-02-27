@@ -7,6 +7,7 @@
     max-width: 734px;
     min-height: 720px;
     margin-right: 2.15%;
+    backdrop-filter: blur(5px);
 }
 
 .modal {

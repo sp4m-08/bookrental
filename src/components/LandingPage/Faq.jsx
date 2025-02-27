@@ -37,15 +37,15 @@ const Faq = () => {
 
     return (
         <div className="container-faq">
-            <h1 className="header">FAQ</h1>
+            <h1 className="header-faq">FAQ</h1>
             <div className="faq">
                 {faqData.map((item, index) => (
                     <FaqItem key={index} question={item.question} answer={item.answer} />
                 ))}
             </div>
             <div className="about-us">   
-                <h1 className="header">About Us</h1>
-                <p className="desciption">
+                <h1 className="header-faq">About Us</h1>
+                <p className="description">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                 </p>

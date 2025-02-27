@@ -9,7 +9,7 @@ const Header = () => {
   
 
   return (
-        <header className="header">
+    <header className="header">
       <div className="logo-container">
         <div className="logo-circle">
           <span className="logo-text">Lo</span>
@@ -18,7 +18,7 @@ const Header = () => {
       </div>
 
       <nav className="nav-links">
-        <span className="nav-link" onClick={() => navigate('/')}>Home</span>
+        <span className="nav-link" onClick={() => navigate('/home')}>Home</span>
         <span className="nav-link" onClick={() => navigate('/profile')}>Profile</span>
         <span className="nav-link" onClick={() => navigate('/wishlist')}>Wishlist</span>
       </nav>

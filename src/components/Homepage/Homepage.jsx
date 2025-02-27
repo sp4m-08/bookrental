@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../Homepage/Header';
+import Header from '../../Header';
 import ListSection from '../Homepage/ListSection';
 //import Footer from '../Homepage/Footer';
 import './Homepage.css';
@@ -9,7 +9,7 @@ const Homepage = () => {
     <div className="homepage">
       
       <div className="header-section">
-        <Header />
+        {/* <Header /> */}
       </div>
 
       

@@ -239,7 +239,7 @@ const ListSection = () => {
           <h1 className="materials-title">Available Material</h1>
           <div className="materials-section">
             {materials.map((material) => (
-              <div key={material.id} className="material-card" onClick={() => navigate('/book/:id')}>
+              <div key={material.id}  className="material-card" onClick={() => navigate('/book/:id')}>
                 {/* {have to add material (book/note) img here} */}
                 <img src={'white_space.png'} alt="material" className="material-image" /> 
                 <div className="material-info">

@@ -1,15 +1,18 @@
 import React from "react";
 import "./Detail.css";
+import { useNavigate } from "react-router-dom";
+
 
 const Detail = () => {
+  const navigate = useNavigate();
+
   return (
+
     <main className="container">
       <div className="content-box">
         {/* Back Button */}
-        <div className="back-btn">
-          <svg className="arrow" width={52} height={52} viewBox="0 0 52 52" fill="none" xmlns="./arrow.png">
-            <path d="M25.604 19.2031L19.203 25.6041M19.203 25.6041L25.604 32.0051M19.203 25.6041L36.2724 25.6041" stroke="#1C0070" strokeWidth="2.13367" />
-          </svg>
+        <div className="back-btn" onClick={()=>navigate('/home')}>
+          <img  src="./arrow.png" className="arrow"/>
           <span>Back</span>
         </div>
         {/* Content Grid */}

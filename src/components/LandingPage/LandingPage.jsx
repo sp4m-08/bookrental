@@ -28,28 +28,41 @@ const LandingPage = () => {
 
   return (
     <div>
-      <header>
-        <div className="logo">
-          <div className="img">
-            <div className="img-overlay"></div>
-            <span className="circle">LO</span>
-            <span className="text">LOGO</span>
-          </div>
-          <nav>
-            <ul className="nav-links">
-              <li onClick={() => navigate('/home')}>Home</li>
-              <li onClick={() => navigate('/home')}>Browse Books</li>
-              <li onClick={() => navigate('/home')}>Browse Notes</li>
-              <li onClick={() =>routeTo('/faq')}> FAQ</li>
-              <li onClick={() =>routeTo('/about-us')}>About us</li>
-              <li>
-                <div className="slb">
-                  <div className="btop" onClick={handleGoogleLogin}>Sign up/Login</div>
-                </div>
-              </li>
-            </ul>
-          </nav>
+     <header className="header">
+      <div className="logo-container">
+        <div className="logo-circle">
+          <span className="logo-text">Lo</span>
         </div>
+        <span className="logo-title">LOGO</span>
+      </div>
+
+      <nav className="nav-links">
+        <span className="nav-link" onClick={() => navigate('/')}>Home</span>
+        <span className="nav-link" onClick={() => navigate('/home')}>Browse Books</span>
+        <span className="nav-link" onClick={() => navigate('/home')}>Browse Notes</span>
+        <span className="nav-link" onClick={() => navigate('/faq')}>FAQ</span>
+        <span className="nav-link" onClick={() => navigate('/about-us')}>About Us</span>
+      </nav>
+          <button
+          className="upload-button"
+          onClick={handleGoogleLogin}
+          onMouseOver={(e) => {
+            e.currentTarget.style.background = '#1C0071';
+            e.currentTarget.style.color = '#fff';
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.background = 'transparent';
+            e.currentTarget.style.color = '#1C0071';
+          }}
+        >
+          Sign Up/Login
+        </button>
+                  
+                
+              
+            
+          
+        
       </header>
 
       <section className="mid">

@@ -232,6 +232,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    cursor:pointer;
     gap: 10px;
     height: 260px;
     max-width:200px;
@@ -304,7 +305,8 @@
     font-size: 12px;
     font-family: 'Poppins';
     color: #3c3e78;
-    margin-top: 17px;
+    
+    margin-bottom:10px;
 }
 
 .date-value {

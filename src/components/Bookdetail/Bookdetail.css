@@ -8,12 +8,17 @@
 .app-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    /* Centers children horizontally */
+    justify-content: flex-start;
     width: 100%;
+    max-width: 1267px;
+    /* Ensures consistent width */
+    margin: 0 auto;
+    /* Centers the entire container */
     min-height: 100vh;
     background: rgba(255, 255, 255, 0);
-    ;
+    position: relative;
+    z-index: 1000;
 }
 
-.header-section {
-    flex-grow: 0;
-}

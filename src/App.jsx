@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import LandingPage from './components/LandingPage/LandingPage';
 import BookNotes from './components/LandingPage/BookNotes';
 import Faq from './components/LandingPage/Faq';
@@ -6,53 +6,41 @@ import Homepage from './components/Homepage/Homepage';
 import Upload from './components/Upload/Upload';
 import WishList from './components/Wishlist/Wishlist';
 import Bookdetail from './components/Bookdetail/Bookdetail';
-import Header from './components/Homepage/Header';
+import Header from './Header';
+import UploadHeader from './UploadHeader';
+
+const Layout = () => {
+    const location = useLocation();
+    
+    return (
+        <>
+            {/* Show Header on all pages except '/' */}
+            {location.pathname !== '/' && <Header/>  && (location.pathname === '/upload' ? <UploadHeader /> : <Header/>)}
+            <Routes>
+                <Route 
+                    path="/" 
+                    element={
+                        <>
+                            <LandingPage />
+                            <BookNotes />
+                            <Faq />
+                        </>
+                    } 
+                />
+                <Route path="/home" element={<Homepage />} />
+                <Route path="/upload" element={<Upload />} />
+                <Route path="/wishlist" element={<WishList />} />
+                <Route path="/book/:id" element={<Bookdetail />} />
+            </Routes>
+        </>
+    );
+};
 
 function App() {
     return (
-        <div>
-            {/* <div className='navbar'>
-                <Header/>
-            </div> */}
-            
-        
         <Router>
-            <Routes>
-                <Route path='/' element={<div>
-                    <LandingPage />
-                    <BookNotes />
-                    <Faq/>
-
-                    
-                    
-                </div>} />
-
-
-                
-
-                <Route path='/home' element={<div>
-                    <Homepage/>
-
-                </div>} />
-
-                <Route path='/upload' element={<div>
-                    <Upload/>
-
-                </div>} />
-
-                <Route path='/wishlist' element={<div>
-                    <WishList/>
-
-                </div>} />
-
-                <Route path='/book/:id' element={<div>
-                    <Bookdetail/>
-
-                </div>} />
-
-            </Routes>
-            </Router>
-            </div>
+            <Layout />
+        </Router>
     );
 }
 
