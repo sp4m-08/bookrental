@@ -12,7 +12,7 @@ const Detail = () => {
       <div className="content-box">
         {/* Back Button */}
         <div className="back-btn" onClick={()=>navigate('/home')}>
-          <img  src="./arrow.png" className="arrow"/>
+          <img  src="./arrow.png" alt="<-"className="arrow"/>
           <span>Back</span>
         </div>
         {/* Content Grid */}

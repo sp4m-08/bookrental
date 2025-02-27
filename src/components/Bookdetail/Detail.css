@@ -10,6 +10,7 @@
     position: inherit;
     margin-left:0px;
     margin-right:-2%;
+    margin-top:-0.001%;
 
 }
 
@@ -38,7 +39,9 @@
     color: #3a4694;
     cursor: pointer;
 }
+.arrow{
 
+}
 .back-btn i {
     font-size: 50px;
 }

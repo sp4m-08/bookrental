@@ -9,22 +9,26 @@ const LandingPage = () => {
 
     
   
-  const routeTo = (path) => {
-      navigate(path);
-    };
 
-  const handleGoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
+const handleGoogleLogin = async () => {
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    const userEmail = result.user.email;
+
+    if (userEmail.endsWith("@vitstudent.ac.in")) {
       console.log("User signed in:", result.user);
-
-      // Redirect to homepage after successful login
-      navigate("/home");
-    } catch (error) {
-      console.error("Google sign-in error:", error.message);
-      alert("Authentication failed. Please try again.");
+      navigate("/home"); 
+    } else {
+      
+      alert("Please enter your VIT Mail address.");
+      auth.signOut(); 
     }
-  };
+  } catch (error) {
+    console.error("Google sign-in error:", error.message);
+    alert("Authentication failed. Please try again.");
+  }
+};
+
 
   return (
     <div>
