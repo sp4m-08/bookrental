@@ -1,0 +1,142 @@
+
+.container {
+    padding: 15px 50px;
+    width: 1390px;
+    margin: 20px;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-box {
+    padding: 20px 40px;
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border-radius: 14.38px;
+    backdrop-filter: blur(5px);
+    background-color: #557bb026;
+}
+
+.back-btn {
+    position: absolute;
+    left: 60px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #3a4694;
+    cursor: pointer;
+}
+
+.back-btn i {
+    font-size: 50px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr;
+    gap: 30px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.left-column {
+    position: relative;
+}
+
+.zoom-controls {
+    position: absolute;
+    left: -40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.zoom-controls button {
+    border: 1px solid #3a4694;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.thumb {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #3a4694;
+    background: white;
+}
+
+.thumb.large {
+    height: 50px;
+}
+
+.preview-box {
+    width: 90%;
+    height: 300px;
+    margin-left: 60px;
+    border: 1px solid #3a4694;
+    background: #eef1fc;
+}
+
+.right-column {
+    padding-right: 20px;
+}
+
+.tags span {
+    background: #3a4694;
+    color: #ccd9ec;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #3a4694;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 18px;
+    color: #3a4694;
+}
+
+p {
+    color: #3a4694;
+    font-size: 14px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.author-pic {
+    width: 0px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.valid-date {
+    font-size: 14px;
+    color: #3a4694;
+}

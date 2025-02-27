@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import './ListSection.css';
+import { useNavigate } from 'react-router-dom';
 
 const ListSection = () => {
+
+  const navigate = useNavigate();
+
   const [searchQuery, setSearchQuery] = useState('');
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
@@ -18,7 +22,7 @@ const ListSection = () => {
       type: ['Notes', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49.png', 
+      image: '.png', 
     },
     {
       id: 2,
@@ -27,7 +31,7 @@ const ListSection = () => {
       type: ['TextBook', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49-2.png',
+      image: '.png',
     },
     {
       id: 3,
@@ -36,7 +40,7 @@ const ListSection = () => {
       type: ['Notes', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49.png',
+      image: '.png',
     },
     {
       id: 4,
@@ -45,7 +49,7 @@ const ListSection = () => {
       type: ['TextBook', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49-2.png',
+      image: '.png',
     },
     {
       id: 5,
@@ -54,7 +58,7 @@ const ListSection = () => {
       type: ['Notes', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49.png',
+      image: '.png',
     },
     {
       id: 6,
@@ -63,7 +67,7 @@ const ListSection = () => {
       type: ['TextBook', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49-2.png',
+      image: '.png',
     },
     {
       id: 7,
@@ -72,7 +76,7 @@ const ListSection = () => {
       type: ['Notes', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49.png',
+      image: '.png',
     },
     {
       id: 8,
@@ -81,7 +85,7 @@ const ListSection = () => {
       type: ['TextBook', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49-2.png',
+      image: '.png',
     },
     {
       id: 9,
@@ -90,7 +94,7 @@ const ListSection = () => {
       type: ['Notes', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49.png',
+      image: '.png',
     },
     {
       id: 10,
@@ -99,7 +103,7 @@ const ListSection = () => {
       type: ['Notes', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49.png',
+      image: '.png',
     },
     {
       id: 11,
@@ -108,7 +112,7 @@ const ListSection = () => {
       type: ['TextBook', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49-2.png',
+      image: '.png',
     },
     {
       id: 12,
@@ -117,7 +121,7 @@ const ListSection = () => {
       type: ['Notes', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49.png',
+      image: '.png',
     },
     {
       id: 13,
@@ -126,7 +130,7 @@ const ListSection = () => {
       type: ['Notes', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49.png',
+      image: '.png',
     },
     {
       id: 14,
@@ -135,7 +139,7 @@ const ListSection = () => {
       type: ['TextBook', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49-2.png',
+      image: '.png',
     },
     {
       id: 15,
@@ -144,9 +148,12 @@ const ListSection = () => {
       type: ['Notes', 'Prob&Stats'],
       datePosted: '18/01/2025',
       validUntil: '18/01/2025',
-      image: 'https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/frame-49.png',
+      image: '',
     },
   ];
+
+
+  
 
   return (
     <div className="list-section">
@@ -163,12 +170,11 @@ const ListSection = () => {
               className="search-input"
             />
             <img
-              src="https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/group-4.png"
+              src="search_blue.png"
               alt="search"
               className="search-icon"
             />
           </div>
-
           {/* Checkboxes */}
           <div className="checkbox-container">
             <label className="checkbox-label">
@@ -233,13 +239,14 @@ const ListSection = () => {
           <h1 className="materials-title">Available Material</h1>
           <div className="materials-section">
             {materials.map((material) => (
-              <div key={material.id} className="material-card">
-                <img src={material.image} alt="material" className="material-image" />
+              <div key={material.id} className="material-card" onClick={() => navigate('/book/:id')}>
+                {/* {have to add material (book/note) img here} */}
+                <img src={'white_space.png'} alt="material" className="material-image" /> 
                 <div className="material-info">
                   <h3 className="material-title">{material.title}</h3>
                   <div className="author-info">
                     <img
-                      src="https://dashboard.codeparrot.ai/api/image/Z6oU7vrycnbNR_mI/vector.png"
+                      src="pfp.png"
                       alt="user"
                       className="author-icon"
                     />

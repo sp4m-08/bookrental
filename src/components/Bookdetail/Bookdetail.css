@@ -1,0 +1,19 @@
+/* .app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0);
+    ;
+}
+
+.header-section {
+    flex-grow: 0;
+}

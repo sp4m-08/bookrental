@@ -7,6 +7,12 @@ import { signInWithPopup } from "firebase/auth";
 const LandingPage = () => {
   let navigate = useNavigate();
 
+    
+  
+  const routeTo = (path) => {
+      navigate(path);
+    };
+
   const handleGoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
@@ -32,10 +38,10 @@ const LandingPage = () => {
           <nav>
             <ul className="nav-links">
               <li onClick={() => navigate('/home')}>Home</li>
-              <li>Browse Books</li>
-              <li>Browse Notes</li>
-              <li>FAQ</li>
-              <li>About us</li>
+              <li onClick={() => navigate('/home')}>Browse Books</li>
+              <li onClick={() => navigate('/home')}>Browse Notes</li>
+              <li onClick={() =>routeTo('/faq')}> FAQ</li>
+              <li onClick={() =>routeTo('/about-us')}>About us</li>
               <li>
                 <div className="slb">
                   <div className="btop" onClick={handleGoogleLogin}>Sign up/Login</div>

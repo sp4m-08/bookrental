@@ -4,11 +4,13 @@
     width: 100%;
     min-height: 100vh;
     background: rgba(255, 255, 255, 0);
-    ;
+    position: relative;
+    z-index:1000;
 }
 
-.header-section {
-    flex-grow: 0;
+.header-section{
+    z-index: 1000;
+    position:relative;
 }
 
 .main-content {

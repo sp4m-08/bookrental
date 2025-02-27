@@ -3,23 +3,7 @@ import './Header.css';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  let navigateProfile = useNavigate();
-  const routeProfile = () => {
-    let path = `/profile`;
-    navigateProfile(path);
-  };
-
-  let navigateWishlist = useNavigate();
-  const routeWishlist = () => {
-    let path = '/wishlist';
-    navigateWishlist(path);
-  };
-
-  let navigateHome = useNavigate();
-  const routeHome = () => {
-    let path = '/home';
-    navigateHome(path);
-  };
+  let navigate = useNavigate();
 
   return (
     <div className="header">
@@ -32,9 +16,9 @@ const Header = () => {
         <span className="logo-title">LOGO</span>
       </div>
       <nav className="nav-links">
-        <span className="nav-link" onClick={routeHome}>Home</span>
-        <span className="nav-link" onClick={routeProfile}>Profile</span>
-        <span className="nav-link" onClick={routeWishlist}>WishList</span>
+        <span className="nav-link" onClick={()=>navigate('/home')}>Home</span>
+        <span className="nav-link" onClick={()=>navigate('/profile')}>Profile</span>
+        <span className="nav-link" onClick={()=>navigate('/wishlist')}>WishList</span>
       </nav>
       <div className="right-section">
         <img 

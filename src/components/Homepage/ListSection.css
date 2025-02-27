@@ -45,6 +45,7 @@
     padding: 0 15px;
     margin-top: 35px;
     margin-bottom: 5px;
+    color:black;
 }
 
 .search-input {
@@ -54,11 +55,13 @@
     background: transparent;
     font-size: 13.84px;
     font-family: 'Poppins';
-    color: #557bb026;
+    color: black;
+    
+    
 }
 
 .search-icon {
-    width: 26px;
+    width: auto;
     height: 30px;
 }
 
