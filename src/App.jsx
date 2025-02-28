@@ -8,6 +8,7 @@ import WishList from './components/Wishlist/Wishlist';
 import Bookdetail from './components/Bookdetail/Bookdetail';
 import Header from './Header';
 import UploadHeader from './UploadHeader';
+import Profile from './components/Profile/Profile';
 
 const Layout = () => {
     const location = useLocation();
@@ -31,6 +32,7 @@ const Layout = () => {
                 <Route path="/upload" element={<Upload />} />
                 <Route path="/wishlist" element={<WishList />} />
                 <Route path="/book/:id" element={<Bookdetail />} />
+                <Route path="/profile" element={<Profile />} />
             </Routes>
         </>
     );
