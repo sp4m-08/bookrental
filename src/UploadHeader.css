@@ -112,3 +112,69 @@
 .upload-button:hover {
     background-color: #2a3584;
 }
+
+.notification-container {
+    position: relative;
+    z-index: 9999;
+}
+
+.notification-icon {
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+}
+
+.notification-box {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 500px;
+    min-height: 290px;
+    background: #eef1fc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 4px;
+    font-size: small;
+    z-index: 9999;
+
+}
+
+.notification-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: none;
+    border-radius: 6px;
+    border: 2px solid #1C0071;
+    margin-top: 1px;
+
+}
+
+.notification-item:last-child {
+    margin-bottom: 10%;
+}
+
+.notification-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.reject-btn,
+.accept-btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.reject-btn {
+    background: #ddd;
+    color: black;
+    border-radius: 5px;
+}
+
+.accept-btn {
+    background: #1C0071;
+    color: white;
+    border-radius: 5px;
+}

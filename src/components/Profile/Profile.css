@@ -8,6 +8,7 @@
     margin-top: 20px;
     margin-bottom: 2%;
     position: relative;
+    
 }
 
 .profile-settings {
@@ -24,6 +25,7 @@
     margin-left: 1%;
     margin-top: -27.5%;
     flex-wrap: nowrap;
+    box-shadow: 0 0 4px;
 }
 
 .setting-item {
@@ -47,6 +49,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor:pointer;
 }
 
 .user-item p {
@@ -137,6 +140,7 @@ img {
     align-items: flex-start;
     justify-content: space-between;
     padding: 2rem;
+    box-shadow: 0 0 4px;
 }
 
 .profile-details {
@@ -255,6 +259,7 @@ img {
     padding: 20px;
     margin-left: 20px;
     position: relative;
+    box-shadow: 0 0 4px;
 }
 
 .lent-heading {

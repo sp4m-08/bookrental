@@ -25,6 +25,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position:sticky;
+    top:0;
     padding: 15px 30px;
     width: 100%;
     height: 75px;
@@ -33,6 +35,7 @@ body {
     min-width: 1000px;
     box-sizing: border-box;
     z-index: 1000;
+    box-shadow: 0 0 7px;
 }
 
 .logo-container {
@@ -103,6 +106,7 @@ body {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    box-shadow: 0 0 2px ;
 }
 
 .mid {
@@ -146,10 +150,12 @@ body {
   font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
+  box-shadow: 0 0 10px;
 } 
 
 .btn:hover {
     background-color: #395db8;
+    box-shadow: 0 0 10px;
 }
 
 

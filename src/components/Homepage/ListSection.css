@@ -31,6 +31,7 @@
     margin-right: 3px;
     height: 500px;
     backdrop-filter: blur(5px);
+    box-shadow: 0 0 4px;
 }
 
 
@@ -186,6 +187,7 @@
     gap: 20px;
     justify-content: space-evenly;
     height: 800px;
+    box-shadow: 0 0 4px;
 }
 
 .materials-title {

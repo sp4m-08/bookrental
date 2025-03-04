@@ -10,14 +10,16 @@ const Detail = () => {
 
     <main className="container">
       <div className="content-box">
-        {/* Back Button */}
+        
         <div className="back-btn" onClick={()=>navigate('/home')}>
-          <img  src="./arrow.png" alt="<-"className="arrow"/>
+          <img src="arrow.png" alt="<-"className="arrow"/>
           <span>Back</span>
         </div>
-        {/* Content Grid */}
+
+        {/* detail container */}
         <div className="content-grid">
           {/* Left Column */}
+
           <div className="left-column">
             <div className="zoom-controls">
               <div className="sidebar">
@@ -39,6 +41,7 @@ const Detail = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <div className="author">
               <div className="author-pic" />
+              <img src="pfp.png"/>
               <span>John Doe</span>
             </div>
             <div className="valid-date">Valid Until: 16/02/2025</div>

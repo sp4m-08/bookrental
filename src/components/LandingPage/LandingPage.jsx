@@ -3,6 +3,8 @@ import "./LandingPage.css";
 import { useNavigate } from "react-router-dom";
 import { auth, googleProvider } from "../../firebase";
 import { signInWithPopup } from "firebase/auth";
+import BookNotes from "./BookNotes";
+import Faq from "./Faq";
 
 const LandingPage = () => {
   let navigate = useNavigate();
@@ -80,6 +82,8 @@ const handleGoogleLogin = async () => {
           <button className="btn" onClick={handleGoogleLogin}>Sign up/Login</button>
         </div>
       </section>
+      <BookNotes />
+      <Faq/>
     </div>
   );
 };
