@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', 'sans-serif';
     font-weight: 500;
-
 }
 
 body {
@@ -19,14 +17,18 @@ body {
     overflow-x: hidden;
     position: relative;
     background-image: url('newwg.png');
+    font-family: "Times New Roman", sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
+/* Header Styles */
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position:sticky;
-    top:0;
+    position: sticky;
+    top: 0;
     padding: 15px 30px;
     width: 100%;
     height: 75px;
@@ -85,12 +87,6 @@ body {
     cursor: pointer;
 }
 
-.notification-icon {
-    width: 33px;
-    height: 33px;
-    cursor: pointer;
-}
-
 .upload-button {
     width: 164px;
     height: 40px;
@@ -106,9 +102,15 @@ body {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    box-shadow: 0 0 2px ;
+    box-shadow: 0 0 2px;
 }
 
+.upload-button:hover {
+    background: #1C0071;
+    color: #fff;
+}
+
+/* Hero Section Styles */
 .mid {
     display: flex;
     justify-content: center;
@@ -116,6 +118,19 @@ body {
     height: 80vh;
     text-align: center;
     padding: 0 20px;
+    animation: slide-in 3s;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .mid-content h1 {
@@ -123,14 +138,7 @@ body {
     font-size: 60px;
     font-weight: bold;
     color: #1c0071;
-    ;
     margin-bottom: 20px;
-}
-
-.mid-content h1 span {
-    font-family: 'Times New Roman', Times, serif;
-    color: #4955a1;
-    
 }
 
 .mid-content p {
@@ -140,35 +148,233 @@ body {
     margin-bottom: 30px;
 }
 
-
 .btn {
-  background-color: rgb(90, 90, 187);
-  width:180px;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0 10px;
-} 
+    background-color: rgb(90, 90, 187);
+    width: 180px;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px;
+}
 
 .btn:hover {
     background-color: #395db8;
     box-shadow: 0 0 10px;
 }
 
+/* Browse Section Styles */
+.browse-section {
+    padding: 40px 20px;
+    background: #557bb026;
+    margin-bottom: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 17px;
+    backdrop-filter: blur(5px);
+    margin-left: 1.5%;
+    margin-right: -1.5%;
+    box-shadow: 0 0 2px;
+    animation: fade-in 2s ease-in;
+    overflow:hidden;
+}
 
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.browse-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1C0071;
+    margin-bottom: 20px;
+    font-family: 'Gloock', sans-serif;
+    font-weight: 500;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    background-color: #F5F8FF;
+    padding: 20px;
+    border: 2px solid #1C0071;
+    border-radius: 10px;
+    width: 280px;
+    height: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: top 0.3s ease, background-color 0.3s ease;
+    cursor:pointer;
+}
+
+.card:hover {
+    top: -10px;
+    background-color: #d3def4;
+}
+
+.card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3C3E78;
+    margin-bottom: 1px;
+    margin-top: 0px;
+}
+
+.card p {
+    font-size: 12px;
+    color: #3C3E78;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 10px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card .User {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3C3E78;
+}
+
+.view-more {
+    padding: 8px 18px;
+    color: #3C3E78;
+    border: 2px solid #3C3E78;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 3%;
+}
+
+.view-more:hover {
+    background-color: #3C3E78;
+    color: #FFF;
+}
+
+/* FAQ Section Styles */
+.container-faq {
+    background: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    animation: fade-in 2s ease-in;
+    overflow: hidden;
+}
+
+.header-faq {
+    font-size: 3.5rem;
+    background: none;
+}
+
+.faq {
+    margin: 40px 0;
+}
+
+.faq-item {
+    background-color: #d6e4f0;
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    box-shadow: 0 0 2px;
+}
+
+.faq-question {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1d1d70;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #c2d8ed;
+}
+
+.arrow {
+    font-size: 0.9rem;
+    color: #555;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    color: #333;
+    animation: fadeIn 0.3s ease;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.about-us {
+    margin-top: 9%;
+    margin-bottom: 10%;
+}
+
+.description {
+    background-color: none;
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 10%;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
     }
 
-    .hero-content h1 {
+    .mid-content h1 {
         font-size: 40px;
     }
 
-    .hero-content p {
+    .mid-content p {
         font-size: 16px;
     }
 }
