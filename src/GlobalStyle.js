@@ -7,8 +7,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background: url('newwg.png');
-    background-repeat: no-repeat;
-    background-size: cover; /* Ensure the background covers the entire screen */
+    
+    background-size: auto; /* Ensure the background covers the entire screen */
     color: white;
     font-family: 'Poppins', sans-serif; /* Default font */
   }

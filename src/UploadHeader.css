@@ -84,18 +84,19 @@
     cursor: pointer;
 }
 
-.noti-container{
-    display:none;
+.noti-container {
+    display: none;
 }
 
-.notification-icon:hover + .noti-container{
-    display:block;
-    min-width:100px;
-    min-height:80px;
+.notification-icon:hover+.noti-container {
+    display: block;
+    min-width: 100px;
+    min-height: 80px;
     background: none;
     background-color: #557bb026;
     padding: 10px;
 }
+
 .upload-button {
     width: 164px;
     height: 40px;
@@ -177,4 +178,82 @@
     background: #1C0071;
     color: white;
     border-radius: 5px;
+}
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #414141;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .header {
+        max-width: auto;
+        height: 65px;
+        padding: 0 15px;
+    }
+
+    .logo-text {
+        font-size: 30px;
+    }
+
+    .logo-title {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 30px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .upload-button {
+        width: 140px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width:768px) {
+    .header{
+        max-width: auto;
+    }
+    .nav-links {
+        display: none;
+        /* Hide links */
+        flex-direction: column;
+        background: #557bb026;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .right-section {
+        gap: 10px;
+    }
+
+    .upload-button {
+        display: none;
+    }
+
+    .notification-box {
+        width: 90%;
+        right: 5%;
+    }
 }

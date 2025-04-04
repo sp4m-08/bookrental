@@ -123,7 +123,7 @@ const LandingPage = () => {
       <div className="booknotes">
         <section id="browse-books" className="browse-section">
           <h2>Browse Books</h2>
-          <button className="view-more" onClick={() => navigate("/home")}>
+          <button className="view-more" onClick={handleGoogleLogin}>
             View more
           </button>
           <div className="card-container">
@@ -142,7 +142,7 @@ const LandingPage = () => {
 
         <section id="browse-notes" className="browse-section">
           <h2>Browse Notes</h2>
-          <button className="view-more" onClick={() => navigate("/home")}>
+          <button className="view-more" onClick={handleGoogleLogin}>
             View more
           </button>
           <div className="card-container">
