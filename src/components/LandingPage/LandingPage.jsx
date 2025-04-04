@@ -8,22 +8,41 @@ const LandingPage = () => {
   let navigate = useNavigate();
 
   const handleGoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
-      const userEmail = result.user.email;
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    const userEmail = result.user.email;
 
-      if (userEmail.endsWith("@vitstudent.ac.in")) {
-        console.log("User signed in:", result.user);
+    if (userEmail.endsWith("@vitstudent.ac.in")) {
+      const idToken = await result.user.getIdToken();
+
+      // Call your Flask backend with the ID token
+      const response = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token: idToken }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log("Backend verified login:", data);
         navigate("/home");
       } else {
-        alert("Please enter your VIT Mail address.");
+        alert(data.error || "Login failed at backend.");
         auth.signOut();
       }
-    } catch (error) {
-      console.error("Google sign-in error:", error.message);
-      alert("Authentication failed. Please try again.");
+    } else {
+      alert("Please login with your VIT email address.");
+      auth.signOut();
     }
-  };
+  } catch (error) {
+    console.error("Google sign-in error:", error.message);
+    alert("Authentication failed. Please try again.");
+  }
+};
+
 
   // FAQ Item Component (moved from Faq.jsx)
   const FaqItem = ({ question, answer }) => {

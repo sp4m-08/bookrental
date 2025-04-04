@@ -1,8 +1,46 @@
-# React + Vite
+# **Booklease**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A solution to help those in need of books/notes for CAT-2 exams at VIT University.**
 
-Currently, two official plugins are available:
+## **📖 Overview**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Booklease** is a dedicated platform for VIT University students to rent textbooks and study notes for **CAT-2 exams**. The website allows users to:
+
+- **List** their academic materials for rent.
+- **Search** for specific books/notes.
+- **Contact lenders** directly.
+- **Review rental terms** before borrowing.
+
+This service supports **open-book exam preparation** by providing a **cost-effective** and **convenient** way to access study materials.
+
+## **🛠️ Tech Stack**
+
+### **Frontend**
+
+- **HTML**
+- **CSS**
+- **ReactJS**
+
+### **Backend**
+
+- **FastAPI**
+- **MongoDB**
+
+## **🚀 Getting Started**
+
+### **1. Clone the repository:**
+
+```bash
+git clone https://github.com/your-username/Booklease.git
+cd Booklease
+```
+
+### **2. Install dependencies:**
+
+#### **Frontend**
+
+```bash
+cd frontend
+npm install
+npm start
+```
