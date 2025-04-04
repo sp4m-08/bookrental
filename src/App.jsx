@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import LandingPage from './components/LandingPage/LandingPage';
-import Homepage from './components/Homepage/Homepage';
-import Upload from './components/Upload/Upload';
-import WishList from './components/Wishlist/Wishlist';
-import Bookdetail from './components/Bookdetail/Bookdetail';
-import Header from './Header';
-import UploadHeader from './UploadHeader';
-import Profile from './components/Profile/Profile';
+import LandingPage from './app/LandingPage/LandingPage';
+import Homepage from './app/Homepage/Homepage';
+import Upload from './app/Upload/Upload';
+import WishList from './app/Wishlist/Wishlist';
+import Bookdetail from './app/Bookdetail/Bookdetail';
+import Header from './components/Header';
+import UploadHeader from './components/UploadHeader';
+import Profile from './app/Profile/Profile';
 import GlobalStyle from './GlobalStyle';
 
 const Layout = () => {

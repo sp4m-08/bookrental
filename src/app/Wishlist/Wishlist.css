@@ -1,0 +1,142 @@
+/* Wishlist Container */
+.wishlist-page {
+    min-height: 100vh;
+}
+
+.wishlist-container {
+    max-width: 1267px;
+    margin: 0 auto;
+    padding: 30px 50px;
+    background: #557bb026;
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    margin-left: 16px;
+    margin-right: -16px;
+    margin-top: 1.7%;
+    margin-bottom: 6%;
+    box-shadow: 0 0 4px;
+}
+
+.wishlist-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #312e81;
+    margin-bottom: 1.5rem;
+}
+
+/* Wishlist Table */
+.wishlist-table {
+    width: 100%;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    min-height:100%;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-cell {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.scrollable-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.scrollable-container::-webkit-scrollbar {
+    width: 16px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+    background: #1c0071;
+    border-radius: 16px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+    background: none;
+}
+
+.table-body {
+    border-top: 1px solid #e5e7eb;
+}
+
+.table-body>div:not(:last-child) {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Wishlist Row */
+.wishlist-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.2s;
+}
+
+.wishlist-row:hover {
+    background-color: #f9fafb;
+}
+
+.row-cell {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-left: 25%;
+}
+
+.lender {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    background-color: #e5e7eb;
+}
+
+/* Status Badge */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-badge.requested {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-badge.accepted {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    color: #ef4444;
+}
