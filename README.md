@@ -48,6 +48,7 @@ npm run dev
 ## 📌 Work Left
 
 - ✅ **UI** has been done with a standard text template.
+- 🔄 **Responsive Design** is yet to be implemented.
 - 🔄 **Backend Integration** is yet to be implemented.
 
 
