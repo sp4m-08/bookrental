@@ -40,7 +40,14 @@ cd Booklease
 #### **Frontend**
 
 ```bash
-cd frontend
+cd bookrental_main
 npm install
-npm start
+npm run dev
 ```
+
+## 📌 Work Left
+
+- ✅ **UI** has been done with a standard text template.
+- 🔄 **Backend Integration** is yet to be implemented.
+
+
