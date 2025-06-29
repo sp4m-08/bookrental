@@ -17,9 +17,8 @@ This service supports **open-book exam preparation** by providing a **cost-effec
 
 ### **Frontend**
 
-- **HTML**
-- **CSS**
 - **ReactJS**
+- **Tailwind CSS**
 
 ### **Backend**
 
@@ -33,6 +32,7 @@ This service supports **open-book exam preparation** by providing a **cost-effec
 ```bash
 git clone https://github.com/your-username/Booklease.git
 cd Booklease
+
 ```
 
 ### **2. Install dependencies:**
@@ -40,7 +40,13 @@ cd Booklease
 #### **Frontend**
 
 ```bash
-cd frontend
+cd bookrental_main
 npm install
-npm start
+npm run dev
 ```
+
+## 📌 Work Left
+
+- ✅ **UI** has been done with a standard text template.
+- 🔄 **Responsive Design** is yet to be implemented.
+- 🔄 **Backend Integration** is yet to be implemented.
