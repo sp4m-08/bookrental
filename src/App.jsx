@@ -18,29 +18,27 @@ const Layout = () => {
   const location = useLocation();
 
   return (
-    <>
+    <div className="font-poppins bg-[url('newwg.png')] bg-contain bg-repeat m-0 p-0 overflow-x-hidden">
+      <GlobalStyle />
       {/* Show Header on all pages except '/' */}
-      <div className="overflow-x-hidden">
-        <GlobalStyle />
-        {location.pathname !== "/" && <Header /> &&
-          (location.pathname === "/upload" ? <UploadHeader /> : <Header />)}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <LandingPage />
-              </>
-            }
-          />
-          <Route path="/home" element={<Homepage />} />
-          <Route path="/upload" element={<Upload />} />
-          <Route path="/wishlist" element={<WishList />} />
-          <Route path="/book/:id" element={<Bookdetail />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </div>
-    </>
+      {location.pathname !== "/" && <Header /> &&
+        (location.pathname === "/upload" ? <UploadHeader /> : <Header />)}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <LandingPage />
+            </>
+          }
+        />
+        <Route path="/home" element={<Homepage />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/wishlist" element={<WishList />} />
+        <Route path="/book/:id" element={<Bookdetail />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </div>
   );
 };
 
